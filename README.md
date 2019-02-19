@@ -1,3 +1,3 @@
 # DeblockGame
-Thist project is just a creative videogame. We are only 2 from French. It's our first creation with GitHub.
+Thist project is just a videogame creation. We are only 2 from French. It's our first creation with GitHub and our first videogame creation.
 Enjoy :)
