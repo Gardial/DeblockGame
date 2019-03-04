@@ -1,1 +1,14 @@
-Modif 
+*04/03/2019 : Début du projet*
+--------------------------------------
+Décisions importantes :
+- Map en isométrie (2.5D)
+- Graphismes et modélisation en full 2D 
+- Moteur du jeu en 2D
+
+
+*Prochaine event*
+-------------------------------------
+
+
+
+
