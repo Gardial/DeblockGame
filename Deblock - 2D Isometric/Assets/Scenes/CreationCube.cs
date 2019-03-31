@@ -25,9 +25,6 @@ public class CreationCube : MonoBehaviour
                 GameObject tuile = Instantiate(tuilePrefab, new Vector3(i*0.64f, j*0.32f, 0), Quaternion.identity) as GameObject;
                 // Nom de la tuile dans le tableau
                 tuile.name = "Tuile (" + i + "," + j + ")";
-                GameObject tuile2 = Instantiate(tuilePrefab, new Vector3(j * 0.32f, i * 0.64f, 0), Quaternion.identity) as GameObject;
-                // Nom de la tuile dans le tableau
-                tuile2.name = "Tuile (" + i + "," + j + ")";
 
             }
         }
