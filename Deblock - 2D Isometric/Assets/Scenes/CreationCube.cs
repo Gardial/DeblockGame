@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CreationCube : MonoBehaviour
 {
-    int hauteur = 10;
-    int largeur = 10;
+    int hauteur = 3;
+    int largeur = 3;
 
     public GameObject tuilePrefab;
 
@@ -22,10 +22,12 @@ public class CreationCube : MonoBehaviour
             for (int j = 0; j < largeur; j++)
             {
 
-                GameObject tuile = Instantiate(tuilePrefab, new Vector3(i, j, 0), Quaternion.identity) as GameObject;
-
+                GameObject tuile = Instantiate(tuilePrefab, new Vector3(i*0.64f, j*0.32f, 0), Quaternion.identity) as GameObject;
                 // Nom de la tuile dans le tableau
                 tuile.name = "Tuile (" + i + "," + j + ")";
+                GameObject tuile2 = Instantiate(tuilePrefab, new Vector3(j * 0.32f, i * 0.64f, 0), Quaternion.identity) as GameObject;
+                // Nom de la tuile dans le tableau
+                tuile2.name = "Tuile (" + i + "," + j + ")";
 
             }
         }
