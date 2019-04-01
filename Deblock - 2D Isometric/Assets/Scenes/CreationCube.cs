@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CreationCube : MonoBehaviour
 {
-    int hauteur = 10;
-    int largeur = 10;
+    int hauteur = 3; // axe Y
+    int largeur = 3; // axe X
 
-    public GameObject tuilePrefab;
+
+    public GameObject tuilePrefabRouge;
+    public GameObject tuilePrefabBleu;
+ 
 
     // Use this for initialization
     void Start()
@@ -17,16 +20,20 @@ public class CreationCube : MonoBehaviour
 
     void maGrille()
     {
-        for (int i = 0; i < hauteur; i++)
+        for (int y = 0; y < hauteur; y++)
         {
-            for (int j = 0; j < largeur; j++)
+            for (int x = 0; x < largeur; x++)
             {
-
-                GameObject tuile = Instantiate(tuilePrefab, new Vector3(i, j, 0), Quaternion.identity) as GameObject;
-
-                // Nom de la tuile dans le tableau
-                tuile.name = "Tuile (" + i + "," + j + ")";
-
+                float valeurX = x * 0.64f;
+                float valeurY = y * 0.32f;
+                float valeurX2 = valeurX + 0.32f;//la moitié de la distance sur l'axe X correspondant à une tuile (donc la moitié de 0.64 
+                float valeurY2 = valeurY + 0.16f;// 
+                //Tuile Rouge
+                GameObject tuileRouge = Instantiate(tuilePrefabRouge, new Vector3(valeurX, valeurY, 0), Quaternion.identity) as GameObject;
+                tuileRouge.name = "TuileRouge (" + x + "," + y + ")"; // Nom des tuiles dans la vue hierarchie
+                //Tuile bleu
+                GameObject tuileBleu = Instantiate(tuilePrefabBleu, new Vector3(valeurX2, valeurY2, 0), Quaternion.identity) as GameObject;
+                tuileBleu.name = "TuileBleu (" + x + "," + y + ")"; // Nom des tuiles dans la vue hierarchie
             }
         }
     }
