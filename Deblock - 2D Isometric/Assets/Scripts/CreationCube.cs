@@ -61,10 +61,13 @@ public class CreationCube : MonoBehaviour
                         break;
 
                 }
-                  
-               
-
             }
         }
+    }
+
+    void MonPersoDeDepart()
+    {
+
+
     }
 }
